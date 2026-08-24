@@ -1,0 +1,664 @@
+{
+  "generatedAt": "2026-08-20T07:19:16.243Z",
+  "revisions": {
+    "chinese-poetry/chinese-poetry": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "CanvaChen/llm-dataset-chinese-poetry": "d983734ebd11e8ed1c81ecdf12a643d15e987c5b"
+  },
+  "licenses": {
+    "chinese-poetry/chinese-poetry": "MIT",
+    "CanvaChen/llm-dataset-chinese-poetry": "Apache-2.0"
+  },
+  "policy": {
+    "fullText": true,
+    "traditionalToSimplified": true,
+    "checks": [
+      "必填字段",
+      "Unicode 与乱码",
+      "校注残留",
+      "异常句读",
+      "异常行长",
+      "全文去重",
+      "名篇句序抽查"
+    ]
+  },
+  "total": 15099,
+  "byDynasty": {
+    "先秦": {
+      "target": 500,
+      "available": 372,
+      "selected": 372,
+      "poets": 12
+    },
+    "两汉": {
+      "target": 600,
+      "available": 327,
+      "selected": 327,
+      "poets": 75
+    },
+    "魏晋": {
+      "target": 2400,
+      "available": 7424,
+      "selected": 2400,
+      "poets": 668
+    },
+    "唐": {
+      "target": 2400,
+      "available": 16088,
+      "selected": 2400,
+      "poets": 844
+    },
+    "宋": {
+      "target": 2400,
+      "available": 31565,
+      "selected": 2400,
+      "poets": 1538
+    },
+    "元": {
+      "target": 2400,
+      "available": 10538,
+      "selected": 2400,
+      "poets": 232
+    },
+    "明": {
+      "target": 2400,
+      "available": 58395,
+      "selected": 2400,
+      "poets": 1662
+    },
+    "清": {
+      "target": 2400,
+      "available": 44176,
+      "selected": 2400,
+      "poets": 2400
+    }
+  },
+  "rejections": {
+    "篇幅结构异常": 2,
+    "有效汉字过少": 107,
+    "含校注残留或乱码": 827,
+    "缺少题目或正文": 147,
+    "题目或作者字段异常": 112,
+    "含非正文字符": 1,
+    "单行长度异常": 2
+  },
+  "duplicateDiscarded": 422,
+  "canonicalOverrides": [
+    {
+      "dynasty": "唐",
+      "poet": "李白",
+      "title": "静夜思",
+      "reason": "古籍异文统一为现行教材通行本"
+    },
+    {
+      "dynasty": "唐",
+      "poet": "杜甫",
+      "title": "江南逢李龟年",
+      "reason": "人名用字与句序统一为现行教材通行本"
+    }
+  ],
+  "spotChecks": [
+    {
+      "name": "《关雎》全文",
+      "passed": true,
+      "poemId": "corpus-shijing-eb1a2d3e8d69c3"
+    },
+    {
+      "name": "《静夜思》句序",
+      "passed": true,
+      "poemId": "corpus-tang-anthology-0e15abcbf094c1"
+    },
+    {
+      "name": "《春望》末联",
+      "passed": true,
+      "poemId": "corpus-tang-anthology-df932fec698684"
+    },
+    {
+      "name": "《山居秋暝》末联",
+      "passed": true,
+      "poemId": "corpus-tang-anthology-1d90053e8e0222"
+    },
+    {
+      "name": "《江南逢李龟年》句序",
+      "passed": true,
+      "poemId": "corpus-tang-anthology-9fe60d2162e6f5"
+    },
+    {
+      "name": "《定风波》完整下阕",
+      "passed": true,
+      "poemId": "corpus-song-ci-anthology-b9e26bc94a3a83"
+    }
+  ],
+  "sources": [
+    {
+      "key": "shijing",
+      "label": "《诗经》全本",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E8%AF%97%E7%BB%8F/shijing.json",
+      "loaded": 305,
+      "accepted": 305,
+      "rejected": 0,
+      "duplicates": 0
+    },
+    {
+      "key": "chuci",
+      "label": "《楚辞》全本",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E6%A5%9A%E8%BE%9E/chuci.json",
+      "loaded": 65,
+      "accepted": 65,
+      "rejected": 0,
+      "duplicates": 0
+    },
+    {
+      "key": "quality-qin-poetry",
+      "label": "高质量历代诗词集 · 秦诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E7%A7%A6.json",
+      "loaded": 2,
+      "accepted": 2,
+      "rejected": 0,
+      "duplicates": 0
+    },
+    {
+      "key": "quality-han-poetry",
+      "label": "高质量历代诗词集 · 汉诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E6%B1%89.json",
+      "loaded": 328,
+      "accepted": 327,
+      "rejected": 1,
+      "duplicates": 0
+    },
+    {
+      "key": "quality-wei-jin-poetry",
+      "label": "高质量历代诗词集 · 魏晋诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E9%AD%8F%E6%99%8B.json",
+      "loaded": 2947,
+      "accepted": 2944,
+      "rejected": 2,
+      "duplicates": 1
+    },
+    {
+      "key": "quality-northern-southern-poetry",
+      "label": "高质量历代诗词集 · 南北朝诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E5%8D%97%E5%8C%97%E6%9C%9D.json",
+      "loaded": 4480,
+      "accepted": 4480,
+      "rejected": 0,
+      "duplicates": 0
+    },
+    {
+      "key": "tang-anthology",
+      "label": "《唐诗三百首》",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/%E5%94%90%E8%AF%97%E4%B8%89%E7%99%BE%E9%A6%96.json",
+      "loaded": 366,
+      "accepted": 365,
+      "rejected": 0,
+      "duplicates": 1
+    },
+    {
+      "key": "tang-0",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.0.json",
+      "loaded": 1000,
+      "accepted": 992,
+      "rejected": 3,
+      "duplicates": 5
+    },
+    {
+      "key": "tang-1000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.1000.json",
+      "loaded": 1000,
+      "accepted": 977,
+      "rejected": 0,
+      "duplicates": 23
+    },
+    {
+      "key": "tang-2000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.2000.json",
+      "loaded": 1002,
+      "accepted": 990,
+      "rejected": 1,
+      "duplicates": 11
+    },
+    {
+      "key": "tang-3000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.3000.json",
+      "loaded": 1001,
+      "accepted": 984,
+      "rejected": 11,
+      "duplicates": 6
+    },
+    {
+      "key": "tang-4000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.4000.json",
+      "loaded": 1000,
+      "accepted": 994,
+      "rejected": 4,
+      "duplicates": 2
+    },
+    {
+      "key": "tang-5000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.5000.json",
+      "loaded": 1000,
+      "accepted": 983,
+      "rejected": 2,
+      "duplicates": 15
+    },
+    {
+      "key": "tang-6000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.6000.json",
+      "loaded": 1001,
+      "accepted": 959,
+      "rejected": 1,
+      "duplicates": 41
+    },
+    {
+      "key": "tang-7000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.7000.json",
+      "loaded": 1003,
+      "accepted": 972,
+      "rejected": 0,
+      "duplicates": 31
+    },
+    {
+      "key": "tang-8000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.8000.json",
+      "loaded": 1001,
+      "accepted": 966,
+      "rejected": 3,
+      "duplicates": 32
+    },
+    {
+      "key": "tang-9000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.9000.json",
+      "loaded": 1000,
+      "accepted": 983,
+      "rejected": 0,
+      "duplicates": 17
+    },
+    {
+      "key": "tang-10000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.10000.json",
+      "loaded": 1000,
+      "accepted": 982,
+      "rejected": 2,
+      "duplicates": 16
+    },
+    {
+      "key": "tang-11000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.11000.json",
+      "loaded": 1000,
+      "accepted": 974,
+      "rejected": 0,
+      "duplicates": 26
+    },
+    {
+      "key": "tang-12000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.12000.json",
+      "loaded": 1000,
+      "accepted": 990,
+      "rejected": 0,
+      "duplicates": 10
+    },
+    {
+      "key": "tang-13000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.13000.json",
+      "loaded": 1000,
+      "accepted": 991,
+      "rejected": 1,
+      "duplicates": 8
+    },
+    {
+      "key": "tang-14000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.14000.json",
+      "loaded": 1000,
+      "accepted": 993,
+      "rejected": 0,
+      "duplicates": 7
+    },
+    {
+      "key": "tang-15000",
+      "label": "全唐诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.15000.json",
+      "loaded": 1000,
+      "accepted": 993,
+      "rejected": 0,
+      "duplicates": 7
+    },
+    {
+      "key": "song-ci-anthology",
+      "label": "《宋词三百首》",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/%E5%AE%8B%E8%AF%8D%E4%B8%89%E7%99%BE%E9%A6%96.json",
+      "loaded": 280,
+      "accepted": 280,
+      "rejected": 0,
+      "duplicates": 0
+    },
+    {
+      "key": "song-0",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.0.json",
+      "loaded": 1000,
+      "accepted": 992,
+      "rejected": 8,
+      "duplicates": 0
+    },
+    {
+      "key": "song-1000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.1000.json",
+      "loaded": 1000,
+      "accepted": 992,
+      "rejected": 8,
+      "duplicates": 0
+    },
+    {
+      "key": "song-2000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.2000.json",
+      "loaded": 1000,
+      "accepted": 971,
+      "rejected": 29,
+      "duplicates": 0
+    },
+    {
+      "key": "song-3000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.3000.json",
+      "loaded": 1000,
+      "accepted": 992,
+      "rejected": 8,
+      "duplicates": 0
+    },
+    {
+      "key": "song-4000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.4000.json",
+      "loaded": 1000,
+      "accepted": 987,
+      "rejected": 13,
+      "duplicates": 0
+    },
+    {
+      "key": "song-5000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.5000.json",
+      "loaded": 1000,
+      "accepted": 995,
+      "rejected": 5,
+      "duplicates": 0
+    },
+    {
+      "key": "song-6000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.6000.json",
+      "loaded": 1000,
+      "accepted": 995,
+      "rejected": 5,
+      "duplicates": 0
+    },
+    {
+      "key": "song-7000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.7000.json",
+      "loaded": 1000,
+      "accepted": 991,
+      "rejected": 9,
+      "duplicates": 0
+    },
+    {
+      "key": "song-8000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.8000.json",
+      "loaded": 1000,
+      "accepted": 997,
+      "rejected": 3,
+      "duplicates": 0
+    },
+    {
+      "key": "song-9000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.9000.json",
+      "loaded": 1000,
+      "accepted": 993,
+      "rejected": 7,
+      "duplicates": 0
+    },
+    {
+      "key": "song-10000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.10000.json",
+      "loaded": 1000,
+      "accepted": 997,
+      "rejected": 3,
+      "duplicates": 0
+    },
+    {
+      "key": "song-11000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.11000.json",
+      "loaded": 1000,
+      "accepted": 995,
+      "rejected": 5,
+      "duplicates": 0
+    },
+    {
+      "key": "song-12000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.12000.json",
+      "loaded": 1000,
+      "accepted": 992,
+      "rejected": 8,
+      "duplicates": 0
+    },
+    {
+      "key": "song-13000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.13000.json",
+      "loaded": 1000,
+      "accepted": 999,
+      "rejected": 1,
+      "duplicates": 0
+    },
+    {
+      "key": "song-14000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.14000.json",
+      "loaded": 1000,
+      "accepted": 997,
+      "rejected": 3,
+      "duplicates": 0
+    },
+    {
+      "key": "song-15000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.15000.json",
+      "loaded": 1000,
+      "accepted": 999,
+      "rejected": 1,
+      "duplicates": 0
+    },
+    {
+      "key": "song-16000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.16000.json",
+      "loaded": 1000,
+      "accepted": 994,
+      "rejected": 6,
+      "duplicates": 0
+    },
+    {
+      "key": "song-17000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.17000.json",
+      "loaded": 1000,
+      "accepted": 999,
+      "rejected": 1,
+      "duplicates": 0
+    },
+    {
+      "key": "song-18000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.18000.json",
+      "loaded": 1000,
+      "accepted": 997,
+      "rejected": 3,
+      "duplicates": 0
+    },
+    {
+      "key": "song-19000",
+      "label": "全宋诗",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.song.19000.json",
+      "loaded": 1000,
+      "accepted": 999,
+      "rejected": 1,
+      "duplicates": 0
+    },
+    {
+      "key": "song-ci-0",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.0.json",
+      "loaded": 1000,
+      "accepted": 957,
+      "rejected": 12,
+      "duplicates": 31
+    },
+    {
+      "key": "song-ci-1000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.1000.json",
+      "loaded": 1000,
+      "accepted": 955,
+      "rejected": 14,
+      "duplicates": 31
+    },
+    {
+      "key": "song-ci-2000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.2000.json",
+      "loaded": 1000,
+      "accepted": 956,
+      "rejected": 36,
+      "duplicates": 8
+    },
+    {
+      "key": "song-ci-3000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.3000.json",
+      "loaded": 1000,
+      "accepted": 937,
+      "rejected": 51,
+      "duplicates": 12
+    },
+    {
+      "key": "song-ci-4000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.4000.json",
+      "loaded": 1000,
+      "accepted": 942,
+      "rejected": 41,
+      "duplicates": 17
+    },
+    {
+      "key": "song-ci-5000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.5000.json",
+      "loaded": 1000,
+      "accepted": 966,
+      "rejected": 23,
+      "duplicates": 11
+    },
+    {
+      "key": "song-ci-6000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.6000.json",
+      "loaded": 1000,
+      "accepted": 959,
+      "rejected": 27,
+      "duplicates": 14
+    },
+    {
+      "key": "song-ci-7000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.7000.json",
+      "loaded": 1000,
+      "accepted": 953,
+      "rejected": 40,
+      "duplicates": 7
+    },
+    {
+      "key": "song-ci-8000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.8000.json",
+      "loaded": 1000,
+      "accepted": 922,
+      "rejected": 75,
+      "duplicates": 3
+    },
+    {
+      "key": "song-ci-9000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.9000.json",
+      "loaded": 1000,
+      "accepted": 961,
+      "rejected": 35,
+      "duplicates": 4
+    },
+    {
+      "key": "song-ci-10000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.10000.json",
+      "loaded": 1000,
+      "accepted": 960,
+      "rejected": 32,
+      "duplicates": 8
+    },
+    {
+      "key": "song-ci-11000",
+      "label": "全宋词",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.11000.json",
+      "loaded": 1000,
+      "accepted": 944,
+      "rejected": 47,
+      "duplicates": 9
+    },
+    {
+      "key": "yuanqu",
+      "label": "元曲总集",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%83%E6%9B%B2/yuanqu.json",
+      "loaded": 11057,
+      "accepted": 10538,
+      "rejected": 511,
+      "duplicates": 8
+    },
+    {
+      "key": "ming-poetry",
+      "label": "高质量历代诗词集 · 明诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E6%98%8E_1.json",
+      "loaded": 58463,
+      "accepted": 58395,
+      "rejected": 68,
+      "duplicates": 0
+    },
+    {
+      "key": "qing-poetry",
+      "label": "高质量历代诗词集 · 清诗",
+      "url": "https://raw.githubusercontent.com/CanvaChen/llm-dataset-chinese-poetry/d983734ebd11e8ed1c81ecdf12a643d15e987c5b/data2/%E6%B8%85_1.json",
+      "loaded": 44204,
+      "accepted": 44176,
+      "rejected": 28,
+      "duplicates": 0
+    }
+  ]
+}

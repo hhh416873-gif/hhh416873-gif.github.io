@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07070b" />
+    <meta name="description" content="收藏一首诗，点亮一颗星。让读过、喜欢过的诗，组成只属于你的宇宙。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="星笺 · 我的诗歌宇宙" />
+    <meta property="og:description" content="收藏一首诗，点亮一颗星。让读过、喜欢过的诗，组成只属于你的宇宙。" />
+    <meta property="og:image" content="https://flourishing-frangollo-94a42f.netlify.app/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="星笺 · 我的诗歌宇宙" />
+    <meta name="twitter:description" content="收藏一首诗，点亮一颗星。" />
+    <meta name="twitter:image" content="https://flourishing-frangollo-94a42f.netlify.app/og.png" />
+    <title>星笺 · 我的诗歌宇宙</title>
+    <script type="module" crossorigin src="/assets/index-Cs1C2k5X.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BlaGp3Gh.css">
+  </head>
+  <body class="mode-discover">
+    <div id="app">
+      <canvas id="space" aria-label="可漫游的诗歌星空"></canvas>
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="topbar hud">
+        <button class="brand" id="brandBtn" aria-label="回到宇宙中心">
+          <span class="brand-mark">星笺</span>
+          <span class="brand-copy">MY POETRY<br />UNIVERSE</span>
+        </button>
+        <nav class="mode-switch" aria-label="浏览模式">
+          <button class="mode-btn active" data-mode="discover"><span>探索诗海</span></button>
+          <button class="mode-btn" data-mode="universe"><span>我的宇宙</span><b id="navCount">0</b></button>
+        </nav>
+        <div class="top-actions">
+          <button class="icon-btn music-btn" id="musicToggle" aria-label="开启背景音乐" aria-pressed="false"><span aria-hidden="true">♫</span></button>
+          <button class="icon-btn" id="searchToggle" aria-label="搜索诗歌">⌕</button>
+          <button class="star-count" id="universeBtn" aria-label="进入我的宇宙"><span>已点亮</span><strong id="starCount">0</strong><em>颗星</em></button>
+        </div>
+      </header>
+
+      <section class="overview-intro hud" id="overviewIntro" aria-labelledby="overviewTitle">
+        <span>八朝共筑一座诗歌银河</span>
+        <h1 id="overviewTitle">从银核出发，穿越中国诗歌的时间</h1>
+        <p>先秦至清代分布在同一座银河的不同旋臂。选择朝代进入星域；每颗亮星都是一首诗，收藏后会在“我的宇宙”里连成星座。</p>
+        <div><button id="startExploring">从唐代开始 <b>→</b></button><small>银核是诗源 · 旋臂是时代 · 亮星是诗歌</small></div>
+      </section>
+
+      <section class="search-panel hud" id="searchPanel">
+        <div class="search-head"><span>在诗海中寻找</span><button id="closeSearch" aria-label="关闭搜索">×</button></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" placeholder="输入诗人、诗名或一句诗…" autocomplete="off" /></label>
+        <div class="search-results" id="searchResults"></div>
+      </section>
+
+      <section class="galaxy-nav hud hidden" id="galaxyNav" aria-label="朝代星系导航">
+        <button class="galaxy-arrow" id="prevGalaxy" aria-label="上一个朝代星系">←</button>
+        <button class="galaxy-current" id="galaxyCurrent" aria-label="回到朝代星系中心">
+          <span id="galaxyYears">618 — 907</span>
+          <strong id="galaxyName">唐代星系</strong>
+          <small><i id="galaxyColor"></i><b id="galaxyEpithet">盛唐银河</b> · <em id="galaxyCount">0 首</em></small>
+        </button>
+        <button class="galaxy-arrow" id="nextGalaxy" aria-label="下一个朝代星系">→</button>
+        <button class="galaxy-overview" id="galaxyOverview">八朝总览</button>
+        <p class="galaxy-intro"><span id="galaxyIntro">诗、乐与礼尚未分开，歌谣从土地与神话中升起。</span><a id="galaxySource" href="https://science.nasa.gov/universe/galaxies/" target="_blank" rel="noreferrer">了解银河结构 ↗</a></p>
+      </section>
+
+      <section class="theme-filter hud" id="themeFilter" aria-label="按朝代探索">
+        <span>按朝代</span>
+        <button class="theme-chip active" data-theme="全部">全部</button><button class="theme-chip" data-theme="先秦">先秦</button><button class="theme-chip" data-theme="两汉">两汉</button><button class="theme-chip" data-theme="魏晋">魏晋南北</button><button class="theme-chip" data-theme="唐">唐</button><button class="theme-chip" data-theme="宋">宋</button><button class="theme-chip" data-theme="元">元</button><button class="theme-chip" data-theme="明">明</button><button class="theme-chip" data-theme="清">清</button><b id="libraryCount">诗库加载中</b>
+      </section>
+
+      <aside class="universe-dock hud hidden" id="universeDock">
+        <div class="dock-head"><div><span>我的诗歌宇宙</span><strong><b id="dockCount">0</b> 颗星 · <b id="dockGroupCount">0</b> 片星座</strong></div><button id="closeDock" aria-label="收起">×</button></div>
+        <div class="universe-empty" id="universeEmpty"><div class="empty-orbit"><i></i></div><strong>宇宙还在等待第一束光</strong><p>去诗海遇见一首喜欢的诗，把它收入这里。</p><button class="text-btn" id="goDiscover">去探索诗海 →</button></div>
+        <div class="constellation-list" id="constellationList"></div>
+        <button class="share-universe hidden" id="shareUniverse">分享我的星图 <span>↗</span></button>
+      </aside>
+
+      <main class="poem-panel hidden" id="poemPanel" aria-live="polite">
+        <button class="panel-close" id="closePanel" aria-label="关闭诗歌">×</button>
+        <div class="panel-scroll">
+          <div class="panel-kicker"><span id="poemDynasty">宋</span><i></i><span id="poemForm">词</span></div>
+          <h1 id="poemTitle">临江仙·送钱穆父</h1><div class="poet-name" id="poemPoet">苏轼</div>
+          <div class="poem-copy" id="poemBody"></div><p class="poem-note" id="poemNote"></p>
+          <div class="reading-meta"><span><i>✓</i> 已审校 · <b id="poemSource">来源可追溯</b></span><button id="copyLine">复制诗句</button></div>
+        </div>
+        <div class="collect-zone">
+          <label for="constellationSelect">收入哪片星座</label>
+          <select id="constellationSelect"><option>想家时读</option><option>人间清醒</option><option>少年意气</option><option>山水之间</option><option>独处片刻</option></select>
+          <button class="collect-btn" id="collectBtn"><span class="collect-icon">✦</span><span class="collect-copy"><strong>收入我的宇宙</strong><small>收藏后，它会成为一颗星</small></span><span class="collect-arrow">→</span></button>
+        </div>
+      </main>
+
+      <aside class="poet-panel hud hidden" id="poetPanel" aria-live="polite">
+        <button class="panel-close" id="closePoetPanel" aria-label="关闭诗人资料">×</button>
+        <div class="poet-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="poet-panel-body">
+          <div class="poet-kicker"><i id="poetAccent"></i><span id="poetDynasty">唐代星系</span></div>
+          <h2 id="poetName">李白</h2>
+          <div class="poet-years" id="poetYears">701 — 762</div>
+          <strong class="poet-title" id="poetTitle">盛唐最自由的星辰</strong>
+          <p id="poetBiography"></p>
+          <div class="poet-stats"><span><b id="poetPoemCount">0</b> 首入图</span><span>诗人星团</span></div>
+          <div class="poet-works" id="poetWorks"></div>
+        </div>
+      </aside>
+
+      <div class="poem-labels" id="poemLabels" aria-hidden="true"></div><div class="poem-discovery-hint hidden" id="poemDiscoveryHint" role="status" aria-live="polite"><i aria-hidden="true">✦</i><span>每颗亮星都是一首诗 · 点击或轻触查看</span></div><div class="galaxy-flight" id="galaxyFlight" aria-hidden="true"><i></i><span id="galaxyFlightLabel">穿越至唐代星系</span></div><div class="meteor hidden" id="meteor"><i></i></div><div class="toast hidden" id="toast"></div>
+
+      <footer class="bottom-bar hud"><div class="hint"><span class="mouse-icon">↕</span> 拖拽漫游 · 滚轮远近 · 点击诗星 / 诗人恒星</div><div class="era-legend"><i style="--dot:#b98d4e"></i>先秦 <i style="--dot:#c97858"></i>汉 <i style="--dot:#769b9b"></i>魏晋 <i style="--dot:#dcae48"></i>唐 <i style="--dot:#5ea7c2"></i>宋 <i style="--dot:#9a77bc"></i>元 <i style="--dot:#be695b"></i>明 <i style="--dot:#6f987d"></i>清</div><span class="credits"><a class="data-credit" href="https://github.com/chinese-poetry/chinese-poetry" target="_blank" rel="noreferrer">诗词数据</a><a class="data-credit" href="https://www.cosmos.esa.int/web/gaia/milky-way" target="_blank" rel="noreferrer">外部银河：ESA/Gaia/DPAC</a><a class="data-credit" href="https://science.nasa.gov/photojournal/point-source-all-sky/" target="_blank" rel="noreferrer">360°星空：NASA 2MASS</a><a class="data-credit" href="https://commons.wikimedia.org/wiki/File:Liu_Shui.ogg" target="_blank" rel="noreferrer">古琴《流水》：Charlie Huang · CC BY 2.5</a></span><button class="quiet-btn" id="quietBtn">◐ 静谧模式</button></footer>
+
+      <section class="onboarding" id="onboarding">
+        <div class="onboarding-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="onb-card"><div class="seal">星<br />笺</div><div class="onb-eyebrow">为喜欢古诗与收藏的人</div><h1>沿八朝星河<br />找到属于你的诗</h1><p>这里的每颗亮星都是一首诗。选择一个朝代，点开诗星阅读；收藏喜欢的作品，它们会在“我的宇宙”里连成只属于你的星座。</p><div class="onb-steps" aria-label="使用方法"><span><b>01</b>选朝代</span><span><b>02</b>点诗星</span><span><b>03</b>连星座</span></div><button class="enter-btn" id="enterBtn">进入八朝诗海 <span>→</span></button><button class="skip-btn" id="skipOnb">跳过导览</button></div>
+      </section>
+    </div>
+  </body>
+</html>
