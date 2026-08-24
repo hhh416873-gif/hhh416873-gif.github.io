@@ -15,8 +15,8 @@
     <meta name="twitter:description" content="收藏一首诗，点亮一颗星。" />
     <meta name="twitter:image" content="https://hhh416873-gif.github.io/og.png" />
     <title>星笺 · 我的诗歌宇宙</title>
-    <script type="module" crossorigin src="/assets/index-XNOlERk5.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C9UmA2ps.css">
+    <script type="module" crossorigin src="/assets/index-qN-0HrhC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-qaGomvPw.css">
   </head>
   <body class="mode-discover">
     <div id="app">
@@ -50,7 +50,7 @@
 
       <section class="search-panel hud" id="searchPanel">
         <div class="search-head"><span>在诗海中寻找</span><button id="closeSearch" aria-label="关闭搜索">×</button></div>
-        <label class="search-box"><span>⌕</span><input id="searchInput" placeholder="输入诗人、诗名或一句诗…" autocomplete="off" /></label>
+        <label class="search-box"><span>⌕</span><input id="searchInput" aria-label="输入诗人、诗名或诗句" placeholder="输入诗人、诗名或一句诗…" autocomplete="off" /></label>
         <div class="search-results" id="searchResults"></div>
       </section>
 
@@ -72,20 +72,20 @@
       </section>
 
       <aside class="universe-dock hud hidden" id="universeDock">
-        <div class="dock-head"><div><span>我的诗歌宇宙</span><strong><b id="dockCount">0</b> 颗星 · <b id="dockGroupCount">0</b> 片星座</strong></div><button id="closeDock" aria-label="收起">×</button></div>
+        <div class="dock-head"><div><span>我的诗歌宇宙</span><strong><b id="dockCount">0</b> 颗星 · <b id="dockGroupCount">0</b> 片星座</strong><small>收藏仅保存在当前设备</small></div><button id="closeDock" aria-label="收起收藏窗口">×</button></div>
         <div class="universe-empty" id="universeEmpty"><div class="empty-orbit"><i></i></div><strong>宇宙还在等待第一束光</strong><p>去诗海遇见一首喜欢的诗，把它收入这里。</p><button class="text-btn" id="goDiscover">去探索诗海 →</button></div>
         <div class="constellation-list" id="constellationList"></div>
         <button class="share-universe hidden" id="shareUniverse">分享我的星图 <span>↗</span></button>
       </aside>
 
-      <main class="poem-panel hidden" id="poemPanel" aria-live="polite">
+      <main class="poem-panel hidden" id="poemPanel" role="dialog" aria-modal="false" aria-labelledby="poemTitle" aria-live="polite" tabindex="-1">
         <button class="panel-close" id="closePanel" aria-label="关闭诗歌">×</button>
         <div class="panel-scroll">
           <div class="panel-kicker"><span id="poemDynasty">宋</span><i></i><span id="poemForm">词</span></div>
           <h1 id="poemTitle">临江仙·送钱穆父</h1><div class="poet-name" id="poemPoet">苏轼</div>
           <div class="poem-copy" id="poemBody"></div><p class="poem-note" id="poemNote"></p>
           <div class="related-poems"><span>沿星线继续读</span><div id="relatedPoemList"></div></div>
-          <div class="reading-meta"><span><i>✓</i> 已审校 · <b id="poemSource">来源可追溯</b></span><div><button id="copyLine">复制诗句</button><button id="sharePoem">分享此诗</button></div></div>
+          <div class="reading-meta"><span><i>✓</i> 机器清洗 · 名篇校核 · <b id="poemSource">来源可追溯</b></span><div><button id="copyLine">复制诗句</button><button id="sharePoem">分享此诗</button></div></div>
         </div>
         <div class="collect-zone">
           <label for="constellationSelect">收入哪片星座</label>
@@ -94,7 +94,7 @@
         </div>
       </main>
 
-      <aside class="poet-panel hud hidden" id="poetPanel" aria-live="polite">
+      <aside class="poet-panel hud hidden" id="poetPanel" role="dialog" aria-modal="false" aria-labelledby="poetName" aria-live="polite" tabindex="-1">
         <button class="panel-close" id="closePoetPanel" aria-label="关闭诗人资料">×</button>
         <div class="poet-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
         <div class="poet-panel-body">
@@ -108,7 +108,7 @@
         </div>
       </aside>
 
-      <div class="poem-labels" id="poemLabels" aria-hidden="true"></div><div class="poem-discovery-hint hidden" id="poemDiscoveryHint" role="status" aria-live="polite"><i aria-hidden="true">✦</i><span>每颗亮星都是一首诗 · 点击或轻触查看</span></div><div class="galaxy-flight" id="galaxyFlight" aria-hidden="true"><i></i><span id="galaxyFlightLabel">穿越至唐代星系</span></div><div class="meteor hidden" id="meteor"><i></i></div><div class="toast hidden" id="toast"></div>
+      <div class="poem-labels" id="poemLabels"></div><div class="poem-discovery-hint hidden" id="poemDiscoveryHint" role="status" aria-live="polite"><i aria-hidden="true">✦</i><span>每颗亮星都是一首诗 · 点击或轻触查看</span></div><div class="galaxy-flight" id="galaxyFlight" aria-hidden="true"><i></i><span id="galaxyFlightLabel">穿越至唐代星系</span></div><div class="meteor hidden" id="meteor"><i></i></div><div class="toast hidden" id="toast"></div>
 
       <footer class="bottom-bar hud">
         <div class="hint"><span class="mouse-icon">↕</span> 拖拽漫游 · 滚轮远近 · 点击诗星</div>
