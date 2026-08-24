@@ -15,9 +15,9 @@
     <meta name="twitter:description" content="收藏一首诗，点亮一颗星。" />
     <meta name="twitter:image" content="https://hhh416873-gif.github.io/og.png" />
     <title>星笺 · 我的诗歌宇宙</title>
-    <script type="module" crossorigin src="/assets/index-Cc9AL4yl.js"></script>
+    <script type="module" crossorigin src="/assets/index-DHD1vizM.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/three-WpV62CsB.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-Dz6dmq5z.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-COLZ_1Py.css">
   </head>
   <body class="mode-discover">
     <div id="app">
@@ -42,7 +42,7 @@
         </nav>
         <div class="top-actions">
           <button class="icon-btn music-btn" id="musicToggle" aria-label="开启背景音乐" aria-pressed="false"><span aria-hidden="true">♫</span></button>
-          <button class="icon-btn" id="searchToggle" aria-label="搜索诗歌">⌕</button>
+          <button class="icon-btn" id="searchToggle" aria-label="搜索诗歌" aria-controls="searchPanel" aria-expanded="false">⌕</button>
           <button class="quality-btn" id="qualityToggle" aria-label="切换银河画质">画质·自动</button>
           <button class="star-count" id="universeBtn" aria-label="进入我的宇宙"><span>已点亮</span><strong id="starCount">0</strong><em>颗星</em></button>
         </div>
@@ -79,8 +79,8 @@
       </section>
 
       <aside class="universe-dock hud hidden" id="universeDock">
-        <div class="dock-head"><div><span>我的诗歌宇宙</span><strong><b id="dockCount">0</b> 颗星 · <b id="dockGroupCount">0</b> 片星座</strong><small>收藏仅保存在当前设备</small></div><button id="closeDock" aria-label="收起收藏窗口">×</button></div>
-        <div class="universe-empty" id="universeEmpty"><div class="empty-orbit"><i></i></div><strong>宇宙还在等待第一束光</strong><p>去诗海遇见一首喜欢的诗，把它收入这里。</p><button class="text-btn" id="goDiscover">去探索诗海 →</button></div>
+        <div class="dock-head"><div><span>我的诗歌宇宙</span><strong><b id="dockCount">0</b> 颗星 · <b id="dockGroupCount">0</b> 片星座</strong><small id="dockScope">收藏仅保存在当前设备</small></div><button id="closeDock" aria-label="收起收藏窗口">×</button></div>
+        <div class="universe-empty" id="universeEmpty"><div class="empty-orbit"><i></i></div><strong id="universeEmptyTitle">宇宙还在等待第一束光</strong><p id="universeEmptyCopy">去诗海遇见一首喜欢的诗，把它收入这里。</p><button class="text-btn" id="goDiscover">去探索诗海 →</button></div>
         <div class="constellation-list" id="constellationList"></div>
         <button class="share-universe hidden" id="shareUniverse">分享我的星图 <span>↗</span></button>
       </aside>
@@ -115,7 +115,7 @@
         </div>
       </aside>
 
-      <div class="poem-labels" id="poemLabels"></div><div class="poem-discovery-hint hidden" id="poemDiscoveryHint" role="status" aria-live="polite"><i aria-hidden="true">✦</i><span>每颗亮星都是一首诗 · 点击或轻触查看</span></div><div class="galaxy-flight" id="galaxyFlight" aria-hidden="true"><i></i><span id="galaxyFlightLabel">穿越至唐代星系</span></div><div class="meteor hidden" id="meteor"><i></i></div><div class="toast hidden" id="toast"></div>
+      <div class="poem-labels" id="poemLabels"></div><div class="poem-discovery-hint hidden" id="poemDiscoveryHint" role="status" aria-live="polite"><i aria-hidden="true">✦</i><span>每颗亮星都是一首诗 · 点击或轻触查看</span></div><div class="galaxy-flight" id="galaxyFlight" aria-hidden="true"><i></i><span id="galaxyFlightLabel">穿越至唐代星系</span></div><div class="meteor hidden" id="meteor"><i></i></div><div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
 
       <footer class="bottom-bar hud">
         <div class="hint"><span class="mouse-icon">↕</span> 拖拽漫游 · 滚轮远近 · 点击诗星</div>
@@ -127,9 +127,9 @@
         <button class="quiet-btn" id="quietBtn">◐ 静谧模式</button>
       </footer>
 
-      <section class="onboarding" id="onboarding">
+      <section class="onboarding" id="onboarding" role="dialog" aria-modal="true" aria-labelledby="onboardingTitle" aria-describedby="onboardingCopy">
         <div class="onboarding-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="onb-card"><div class="seal">星<br />笺</div><div class="onb-eyebrow">为喜欢古诗与收藏的人</div><h1>沿八朝星河<br />找到属于你的诗</h1><p>这里的每颗亮星都是一首诗。选择一个朝代，点开诗星阅读；收藏喜欢的作品，它们会在“我的宇宙”里连成只属于你的星座。</p><div class="onb-steps" aria-label="使用方法"><span><b>01</b>选朝代</span><span><b>02</b>点诗星</span><span><b>03</b>连星座</span></div><button class="enter-btn" id="enterBtn">进入八朝诗海 <span>→</span></button><button class="skip-btn" id="skipOnb">跳过导览</button></div>
+        <div class="onb-card"><div class="seal">星<br />笺</div><div class="onb-eyebrow">为喜欢古诗与收藏的人</div><h1 id="onboardingTitle">沿八朝星河<br />找到属于你的诗</h1><p id="onboardingCopy">这里的每颗亮星都是一首诗。选择一个朝代，点开诗星阅读；收藏喜欢的作品，它们会在“我的宇宙”里连成只属于你的星座。</p><div class="onb-steps" aria-label="使用方法"><span><b>01</b>选朝代</span><span><b>02</b>点诗星</span><span><b>03</b>连星座</span></div><button class="enter-btn" id="enterBtn">从唐代开始探索 <span>→</span></button><button class="skip-btn" id="skipOnb">先看八朝总览</button></div>
       </section>
     </div>
   </body>
