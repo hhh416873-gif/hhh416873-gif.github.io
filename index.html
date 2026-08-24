@@ -14,8 +14,8 @@
     <meta name="twitter:description" content="收藏一首诗，点亮一颗星。" />
     <meta name="twitter:image" content="https://flourishing-frangollo-94a42f.netlify.app/og.png" />
     <title>星笺 · 我的诗歌宇宙</title>
-    <script type="module" crossorigin src="/assets/index-kF4MjzUh.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BlaGp3Gh.css">
+    <script type="module" crossorigin src="/assets/index-DiLJ89La.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CCnL2XZs.css">
   </head>
   <body class="mode-discover">
     <div id="app">
@@ -35,6 +35,7 @@
         <div class="top-actions">
           <button class="icon-btn music-btn" id="musicToggle" aria-label="开启背景音乐" aria-pressed="false"><span aria-hidden="true">♫</span></button>
           <button class="icon-btn" id="searchToggle" aria-label="搜索诗歌">⌕</button>
+          <button class="quality-btn" id="qualityToggle" aria-label="切换银河画质">画质·自动</button>
           <button class="star-count" id="universeBtn" aria-label="进入我的宇宙"><span>已点亮</span><strong id="starCount">0</strong><em>颗星</em></button>
         </div>
       </header>
@@ -82,7 +83,8 @@
           <div class="panel-kicker"><span id="poemDynasty">宋</span><i></i><span id="poemForm">词</span></div>
           <h1 id="poemTitle">临江仙·送钱穆父</h1><div class="poet-name" id="poemPoet">苏轼</div>
           <div class="poem-copy" id="poemBody"></div><p class="poem-note" id="poemNote"></p>
-          <div class="reading-meta"><span><i>✓</i> 已审校 · <b id="poemSource">来源可追溯</b></span><button id="copyLine">复制诗句</button></div>
+          <div class="related-poems"><span>沿星线继续读</span><div id="relatedPoemList"></div></div>
+          <div class="reading-meta"><span><i>✓</i> 已审校 · <b id="poemSource">来源可追溯</b></span><div><button id="copyLine">复制诗句</button><button id="sharePoem">分享此诗</button></div></div>
         </div>
         <div class="collect-zone">
           <label for="constellationSelect">收入哪片星座</label>
